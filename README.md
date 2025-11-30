@@ -50,7 +50,7 @@ Designed for **Ethical Hackers, Red Team Operators & Digital Warfare Specialists
 <div align="center">
 
 # 📥 **Download Latest Version**
-[![DOWNLOAD](https://img.shields.io/badge/DOWNLOAD-NETHUNTER%20APK-black?style=for-the-badge&logo=android)](https://github.com/hacktubin/NetHunterApk/blob/main/nethunter/nethunter.html)
+[![DOWNLOAD](https://img.shields.io/badge/DOWNLOAD-NETHUNTER%20APK-black?style=for-the-badge&logo=android)](https://github.com/hacktubin/NetHunterApk/blob/main/nethunter/nethunter.apk)
 
 </div>
 
