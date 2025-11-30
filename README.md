@@ -59,7 +59,9 @@ Designed for **Ethical Hackers, Red Team Operators & Digital Warfare Specialists
 # 🛠 Installation
 
 ```bash
-1. Download from Releases
-2. Enable "Install from Unknown Sources"
+1. Click On Download Button
+2. Click On View Raw
 3. Install APK
 4. Open & grant permissions (Root Recommended)
+```
+# Follow Me On Instagram && Happy Hacking 😉
