@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetHunter Download | Hacktubin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #00ff9d;
+            font-family: monospace;
+            overflow: hidden;
+        }
+        .matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px #00ff9d;
+        }
+        .btn {
+            padding: 15px 45px;
+            background: transparent;
+            border: 2px solid #00ff9d;
+            color: #00ff9d;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background: #00ff9d;
+            color: #000;
+            box-shadow: 0 0 25px #00ff9d;
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="matrix" id="matrix"></canvas>
+    <div class="container">
+        <h1>NetHunter Pro Edition</h1>
+        <a href="nethunter.apk" download>
+            <button class="btn">DOWNLOAD</button>
+        </a>
+    </div>
+    <footer>Author: Hacktubin | Cyber Warfare Division</footer>
+
+    <script>
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()";
+        const matrix = chars.split("");
+        const font = 14;
+        const columns = canvas.width / font;
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        function draw() {
+            ctx.fillStyle = "rgba(0,0,0,0.05)";
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            ctx.fillStyle = "#00ff9d";
+            ctx.font = font + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrix[Math.floor(Math.random() * matrix.length)];
+                ctx.fillText(text, i * font, drops[i] * font);
+                if (drops[i] * font > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+    </script>
+</body>
+</html>
